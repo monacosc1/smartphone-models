@@ -1,6 +1,6 @@
 # smartphones-models-insights
 
-This repository shows the steps taken to perform a classification analysis of the "[Student Outcomes in Higher Education](https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success)" data published on the the UC Irvine Machine Learning Repository.  
+This repository shows an analysis of smartphone features that are predictive of higher ratings and higher prices via the "[Smartphone Models Dataset](https://www.kaggle.com/datasets/abdurrahman22224/smartphone-new-data)" published on Kaggle.  
 
 The data and Jupyter Notebook have been added to the repo so that anyone can recreate the steps involved and add their own insights. 
 
@@ -11,27 +11,18 @@ The data and Jupyter Notebook have been added to the repo so that anyone can rec
 
 # Overview
 ## Key Findings
-* Given an imbalanced dataset, we used a SMOTE method to balance both classes of "dropout" and "graduate".
+* The following features are associated with the following price segments:
+![alt text](https://github.com/monacosc1/smartphone-models/blob/master/images/mode_table.png)
 
-### Marital Status by Target
-* Legally Separated students are likely to drop out. By contrast, widowers are likely to graduate.
-![alt text](https://github.com/monacosc1/student-dropout/blob/master/images/marital_status_by_target.png) 
+### Price and Whether a Model has 5G
+* Higher prices and the presence of 5G are features associated with higher ratings
+![alt text](https://github.com/monacosc1/smartphone-models/blob/master/images/graph_pair_1.png) 
 
-### Mother's Occupation
-* Students whose mothers are teachers, personal service, or professional service workers are likely to graduate.
-![alt text](https://github.com/monacosc1/student-dropout/blob/master/images/mothers_occupation_by_target.png) 
-
-### Area of Study
-* Nursing and Social Science students are likely to graduate.
-![alt text](https://github.com/monacosc1/student-dropout/blob/master/images/course_by_target.png) 
+### Details of Primary Camera
+* Higher camera quality are associated with higher ratings.
+![alt text](https://github.com/monacosc1/smartphone-models/blob/master/images/graph_pair_6.png) 
 
 ## Model Coefficients
-* The final classification model had a validation accuracy of 89%.
-![alt text](https://github.com/monacosc1/student-dropout/blob/master/images/accuracy_report.png) 
-
-# Next Steps
-* Feature selection methods like backward elimination can be used to choose the most relevant features.
-* To handle class imbalance, more sophisticated techniques such as resampling methods (e.g., SMOTE) or ensemble methods (e.g., Random Forest, Gradient Boosting) can be employed.
-* Instead of using the Min-Max scaler, considering Mean-Variance scaling (StandardScaler) might be a better choice
-* Ensemble methods, like a stacked approach to classification (Stacking), can be utilized to combine multiple classifiers, potentially leading to improved predictive performance by leveraging the strengths of each model in the ensemble.
+* The final classification model had a validation accuracy of 85%. Confusion Matrix below:
+![alt text](https://github.com/monacosc1/smartphone-models/blob/master/images/confusion_matrix.png) 
 
